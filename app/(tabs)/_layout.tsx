@@ -2,6 +2,7 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { HapticTab } from '@/components/HapticTab';
+import Header from '@/components/Header';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
@@ -34,7 +35,8 @@ export default function TabLayout() {
           headerStyle: {backgroundColor: "transparent"},
           headerTitleAlign: "center",
           headerStatusBarHeight: 0,
-          headerTitleStyle: {color: colorScheme === "light" ? Colors.light.text : Colors.dark.text}
+          headerTitleStyle: {color: colorScheme === "light" ? Colors.light.text : Colors.dark.text},
+          header: () => <Header title='Schedule' />
         }}
         
       />
