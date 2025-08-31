@@ -7,7 +7,7 @@ import { Calendar } from "react-native-calendars";
 export default function HomeScreen() {
   const colorScheme = useColorScheme();
   const [bgColor, setBgColor] = useState(
-    colorScheme === "light" ? Colors.light.background : Colors.dark.background
+    colorScheme === "light" ? Colors.light.background : Colors.dark.background // storing this in a state variable so that it actually changes if user changes colorScheme while the app is open
   );
 
   useEffect(() => {
