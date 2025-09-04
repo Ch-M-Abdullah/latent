@@ -23,13 +23,13 @@ export default async function createTables(database: SQLiteDatabase) {
 
     // Create resources table
     await database.execAsync(`
-          CREATE TABLE IF NOT EXISTS resource (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              name TEXT NOT NULL,
-              sub_topic_id INTEGER NOT NULL,
-              link TEXT,
-              type TEXT,
-              FOREIGN KEY(sub_topic_id) REFERENCES sub_topic(id) ON DELETE CASCADE
+      CREATE TABLE IF NOT EXISTS resource (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        sub_topic_id INTEGER NOT NULL,
+        link TEXT,
+        type TEXT,
+        FOREIGN KEY(sub_topic_id) REFERENCES sub_topic(id) ON DELETE CASCADE
       );
     `);
   } catch (err: any) {
